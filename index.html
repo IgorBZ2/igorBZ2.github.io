@@ -18,23 +18,39 @@
             align-items: center;
             justify-content: center;
             height: 100vh; /* Para centralizar o conteúdo */
-            background-image: url('https://example.com/sua-imagem-de-fundo.jpg'); /* Imagem de fundo */
-            background-size: cover; /* Faz a imagem cobrir toda a tela */
-            background-position: center; /* Centraliza a imagem de fundo */
         }
 
         h1, h2 {
             color: #ffcc00; /* Cor amarela para os títulos */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra nos títulos */
         }
 
         a {
             color: #1e90ff; /* Cor azul para os links */
-            text-decoration: none; /* Remove o sublinhado */
+            text-decoration: none;
+            position: relative; /* Necessário para a posição da caixa de descrição */
         }
 
         a:hover {
             color: #ff6347; /* Cor laranja para o hover nos links */
+        }
+
+        /* Caixa de descrição */
+        .description {
+            display: none; /* Inicialmente oculta */
+            position: absolute;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 250px;
+            top: 25px; /* Ajuste a posição da caixa */
+            left: 0;
+            z-index: 1;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        }
+
+        a:hover .description {
+            display: block; /* Exibe a caixa de descrição quando o mouse passar por cima */
         }
 
         ul {
@@ -44,11 +60,11 @@
 
         li {
             margin: 10px 0; /* Espaçamento entre os itens da lista */
+            position: relative;
         }
 
         p {
             font-size: 18px; /* Tamanho da fonte do parágrafo */
-            text-align: center;
         }
 
         /* Estilos para a barra de pesquisa */
@@ -67,7 +83,6 @@
             color: white;
             width: 250px;
             margin-right: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao campo de pesquisa */
         }
 
         button {
@@ -77,18 +92,16 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
         }
 
         button:hover {
-            background-color: #ff4500; /* Cor do botão no hover */
+            background-color: #ff4500;
         }
 
         /* Estilos para o container */
         .content {
             width: 80%;
             max-width: 1000px;
-            text-align: center;
         }
     </style>
 </head>
@@ -105,11 +118,31 @@
         
         <h2>Meus Livros</h2>
         <ul>
-            <li><a href="percy-jackson.pdf" target="_blank">Percy Jackson e o Ladrão de Raios 1</a></li>
-            <li><a href="percy-jackson2.pdf" target="_blank">Percy Jackson e o Mar de Monstros 2</a></li>
-            <li><a href="percy-jackson3.pdf" target="_blank">Percy Jackson e a Maldição do Titã 3</a></li>
-            <li><a href="percy-jackson4.pdf" target="_blank">Percy Jackson e a Batalha do Labirinto 4</a></li>
-            <li><a href="percy-jackson5.pdf" target="_blank">Percy Jackson e o Último Olimpiano 5</a></li>
+            <li>
+                <a href="percy-jackson.pdf" target="_blank">Percy Jackson e o Ladrão de Raios 1
+                    <div class="description">Percy descobre que é um semideus e começa uma jornada cheia de aventuras.</div>
+                </a>
+            </li>
+            <li>
+                <a href="percy-jackson2.pdf" target="_blank">Percy Jackson e o Mar de Monstros 2
+                    <div class="description">Percy e seus amigos devem enfrentar um novo inimigo enquanto tentam salvar o mundo.</div>
+                </a>
+            </li>
+            <li>
+                <a href="percy-jackson3.pdf" target="_blank">Percy Jackson e a Maldição do Titã 3
+                    <div class="description">Percy enfrenta desafios em uma missão para salvar um dos deuses mais poderosos.</div>
+                </a>
+            </li>
+            <li>
+                <a href="percy-jackson4.pdf" target="_blank">Percy Jackson e a Batalha do Labirinto 4
+                    <div class="description">Percy e seus amigos se aventuram por um labirinto para impedir a queda dos deuses.</div>
+                </a>
+            </li>
+            <li>
+                <a href="percy-jackson5.pdf" target="_blank">Percy Jackson e o Último Olimpiano 5
+                    <div class="description">Percy lidera uma batalha final para proteger o mundo dos deuses gregos.</div>
+                </a>
+            </li>
         </ul>
     </div>
 </body>
