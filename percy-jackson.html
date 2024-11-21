@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percy Jackson e o Ladrão de Raios</title>
+    <title>Percy Jackson e o Ladrão de Raios 1</title>
     <style>
         body {
             background-color: #121212;
@@ -10,50 +11,44 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px;
         }
 
-        .container {
+        .book-container {
             display: flex;
-            max-width: 1200px;
+            align-items: flex-start;
+            max-width: 900px;
             width: 100%;
+            margin-top: 20px;
         }
 
-        .left {
-            flex: 1;
-            padding: 10px;
+        .book-container img {
+            max-width: 250px;
+            margin-right: 20px;
         }
 
-        .right {
-            flex: 2;
-            padding: 10px;
+        .book-info {
+            max-width: 600px;
         }
 
-        img {
-            max-width: 100%;
-        }
-
-        h1 {
+        h1, h2 {
             color: #ffcc00;
         }
 
         .description {
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 18px;
         }
 
-        .author-photo {
-            width: 50px;
-            height: 50px;
+        .author-info img {
+            max-width: 100px;
             border-radius: 50%;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
-        .button-read {
+        .read-button {
             margin-top: 20px;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #ff6347;
             color: white;
             border: none;
@@ -61,31 +56,36 @@
             cursor: pointer;
         }
 
-        .button-read:hover {
+        .read-button:hover {
             background-color: #ff4500;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Imagem do livro -->
-        <div class="left">
-            <img src="percy-jackson-capa.jpg" alt="Percy Jackson e o Ladrão de Raios">
-        </div>
 
-        <!-- Detalhes do livro -->
-        <div class="right">
+    <div class="book-container">
+        <!-- Capa do livro -->
+        <img src="percy-jackson1-capa.jpg" alt="Percy Jackson e o Ladrão de Raios" />
+
+        <div class="book-info">
             <h1>Percy Jackson e o Ladrão de Raios</h1>
-            <p class="description">Percy Jackson é um adolescente com problemas de disciplina, mas descobre que é filho de um deus grego. Neste livro, ele embarca em uma aventura épica para salvar o mundo dos deuses.</p>
-            <div>
-                <img class="author-photo" src="autor-percy-jackson.jpg" alt="Rick Riordan">
-                <span>Rick Riordan</span>
+            <h2>Por Rick Riordan</h2>
+
+            <div class="description">
+                <p><strong>Descrição:</strong> Percy Jackson é um garoto de 12 anos que descobre ser filho de um deus grego. Ele parte em uma missão para recuperar o raio de Zeus, enfrentando monstros e outros desafios pelo caminho.</p>
             </div>
-            <p>Lançamento: 2005</p>
+
+            <div class="author-info">
+                <img src="autor-percy-jackson.jpg" alt="Rick Riordan" />
+                <p><strong>Autor:</strong> Rick Riordan</p>
+                <p><strong>Data de Lançamento:</strong> 2005</p>
+            </div>
+
             <a href="percy-jackson.pdf" target="_blank">
-                <button class="button-read">Ler o Livro</button>
+                <button class="read-button">Ler o Livro</button>
             </a>
         </div>
     </div>
+
 </body>
 </html>
