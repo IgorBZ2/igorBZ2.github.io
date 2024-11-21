@@ -11,14 +11,26 @@
             background-color: #121212; /* Cor de fundo escura */
             color: white; /* Cor do texto clara */
             font-family: Arial, sans-serif; /* Fonte do texto */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Para centralizar o conteúdo */
+            background-image: url('https://example.com/sua-imagem-de-fundo.jpg'); /* Imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem de fundo */
         }
 
         h1, h2 {
             color: #ffcc00; /* Cor amarela para os títulos */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra nos títulos */
         }
 
         a {
             color: #1e90ff; /* Cor azul para os links */
+            text-decoration: none; /* Remove o sublinhado */
         }
 
         a:hover {
@@ -36,19 +48,69 @@
 
         p {
             font-size: 18px; /* Tamanho da fonte do parágrafo */
+            text-align: center;
+        }
+
+        /* Estilos para a barra de pesquisa */
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            width: 250px;
+            margin-right: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao campo de pesquisa */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+        }
+
+        button:hover {
+            background-color: #ff4500; /* Cor do botão no hover */
+        }
+
+        /* Estilos para o container */
+        .content {
+            width: 80%;
+            max-width: 1000px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Minha Biblioteca Pessoal</h1>
-    <p>Bem-vindo ao meu site exclusivo de livros.</p>
-    <h2>Meus Livros</h2>
-    <ul>
-        <li><a href="percy-jackson.pdf" target="_blank">Percy Jackson e o Ladrão de Raios 1</a></li>
-        <li><a href="percy-jackson2.pdf" target="_blank">Percy Jackson e o Mar de Monstros 2</a></li>
-        <li><a href="percy-jackson3.pdf" target="_blank">Percy Jackson e a Maldição do Titã 3</a></li>
-        <li><a href="percy-jackson4.pdf" target="_blank">Percy Jackson e a Batalha do Labirinto 4</a></li>
-        <li><a href="percy-jackson5.pdf" target="_blank">Percy Jackson e o Último Olimpiano 5</a></li>
-    </ul>
+    <div class="content">
+        <h1>Minha Biblioteca Pessoal</h1>
+        <p>Bem-vindo ao meu site exclusivo de livros.</p>
+        
+        <!-- Barra de Pesquisa -->
+        <form action="#" method="get">
+            <input type="text" placeholder="Buscar livros..." id="search" name="search">
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <h2>Meus Livros</h2>
+        <ul>
+            <li><a href="percy-jackson.pdf" target="_blank">Percy Jackson e o Ladrão de Raios 1</a></li>
+            <li><a href="percy-jackson2.pdf" target="_blank">Percy Jackson e o Mar de Monstros 2</a></li>
+            <li><a href="percy-jackson3.pdf" target="_blank">Percy Jackson e a Maldição do Titã 3</a></li>
+            <li><a href="percy-jackson4.pdf" target="_blank">Percy Jackson e a Batalha do Labirinto 4</a></li>
+            <li><a href="percy-jackson5.pdf" target="_blank">Percy Jackson e o Último Olimpiano 5</a></li>
+        </ul>
+    </div>
 </body>
 </html>
